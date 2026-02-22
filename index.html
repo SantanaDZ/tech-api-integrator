@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech System - API Scanner</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>API_EXTERNAL_FETCH<span>_v3.0</span></h1>
+        </header>
+
+        <section class="project-info">
+            <div class="terminal-header">PROJECT_METADATA</div>
+            <p>
+                <span class="label">ORIGEM:</span> Avaliação Técnica - Infinity School.<br>
+                <span class="label">REQUISITO:</span> Consumo de API pública via HTTP/JSON.<br>
+                <span class="label">NOTAS:</span> Tratamento de exceções (Try/Catch) e renderização dinâmica via DOM foram implementados seguindo o padrão visual Tech Authoral.
+            </p>
+        </section>
+
+        <section class="form-section">
+            <div class="form-actions">
+                <button id="btnBuscar" class="tech-button">INICIAR_VARREDURA_REDE</button>
+            </div>
+            <div id="statusMessage" class="error-message" style="margin-top: 15px;"></div>
+        </section>
+
+        <hr class="divider">
+
+        <section class="list-section">
+            <h2>DATA_RECORDS_FOUND</h2>
+            <div id="loading" style="display: none; color: var(--accent-color);">CONECTANDO_AO_SERVIDOR...</div>
+            <div class="table-container">
+                <table id="tabelaDados">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NOME_USUÁRIO</th>
+                            <th>E-MAIL_CONTATO</th>
+                            <th>EMPRESA</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoTabela">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="scanner.js"></script>
+</body>
+</html>
